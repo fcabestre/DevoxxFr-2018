@@ -56,7 +56,19 @@ $selectionBackgroundColor: $magenta;
 // 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
 // }
 
+.footer {
+  z-index: 10;
+  position:absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 35px;
+}
 
+.footer img {
+  position: absolute;
+  top: 0px;
+  right: 3px;
+  height:100%; }
 
 // Theme template ------------------------------
 @import "../template/theme";

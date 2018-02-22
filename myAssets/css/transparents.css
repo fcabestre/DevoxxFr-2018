@@ -11,6 +11,19 @@ html * {
   color-profile: sRGB;
   rendering-intent: auto; }
 
+.footer {
+  z-index: 10;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 35px; }
+
+.footer img {
+  position: absolute;
+  top: 0px;
+  right: 3px;
+  height: 100%; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -358,3 +371,10 @@ body {
 .reveal .slides sub {
   vertical-align: sub;
   font-size: smaller; }
+
+.reveal pre {
+  width: 75%;
+  font-size: 0.40em;
+  border: none;
+  color: #dcdcdc;
+  background: #002b36; }

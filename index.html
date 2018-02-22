@@ -34,37 +34,55 @@
 
 <div class="reveal">
     <div class="slides">
-        <section>
-            <h2>Ballade au pays de «<span class="orange">Let's Encrypt</span>»</h2>
+        <section data-background-image="myAssets/images/background_1280_720_HD.png">
+            <h1 style="color: #fdf6e3">Ballade au pays de</h1>
+            <h1 style="color: #fdf6e3">«Let's Encrypt»</h1>
         </section>
 
+<!--
         <section>
-            <div style="margin-left: 40px; margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
-            <div style="margin-left: 40px; font-size: smaller; text-align: left" class="blue">@fcabestre</div>
-            <img class="fragment" style="margin-left: 200px; margin-bottom: 100%" src="myAssets/images/ez10.png">
+            <h1><span class="yellow">Ballade au pays de</span></h1>
+            <h1><span class="yellow">«</span>Let's Encrypt<span class="yellow">»</span></h1>
+        </section>
+-->
+
+        <section>
+            <div style="display: flex; justify-content: space-between">
+                <div style="margin-left: 2em; display: flex; flex-direction: column">
+                    <div style="margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
+                    <div style="font-size: smaller; text-align: left" class="blue">@fcabestre</div>
+                </div>
+                <div style="margin-right: 2em; margin-top: 1em; align-self: center"><img src="myAssets/images/easymile.png"></div>
+            </div>
+            <div style="margin-top: 1em; margin-bottom: 100%; display: flex; flex-direction: row; justify-content: center" >
+                <img class="fragment" src="myAssets/images/ez10.png">
+                <img class="fragment" style="margin-right: 10vw; margin-left: 8vw; margin-top: 58px; margin-bottom: 0; object-fit: contain" src="myAssets/images/TractEasy.png">
+            </div>
         </section>
 
-        <section>
-            <h2>Public Key Infrastructure</h2>
-            <img style="margin-bottom: 100%" src="myAssets/images/europe.jpeg">
-        </section>
+        <!--<section>-->
+            <!--<h2>Public Key Infrastructure</h2>-->
+            <!--<img style="margin-top: 5vh; margin-bottom: 100%" src="myAssets/images/europe2.jpeg">-->
+        <!--</section>-->
 
         <section>
-            <h2>Chiffrement assymétrique</h2>
+            <h2>Au Programme</h2>
 
-            <ul style="margin-top: 1em">
-                <li class="fragment">Deux clef distinctes</li>
-                <li class="fragment">Mathématiquement liées</li>
-                <li class="fragment" style="margin-bottom: 1em">Réciproquement non déductibles</li>
-                <li class="fragment"><span class="yellow">Privée</span> + <span class="blue">publique</span></li>
+            <ul style="margin-top: 10vh">
+                <li class="fragment"><span class="green">PKI</span> : Public Key Infrastructure</li>
+                <li style="margin-top: 2vh" class="fragment">Cryptographie (Rappels)</li>
+                <li class="fragment">Certificats</li>
+                <li class="fragment">Autorités de certification</li>
+                <li class="fragment">Chaînes de certificats</li>
+                <li class="fragment">Confiance & Vérification </li>
+                <li style="margin-top: 2vh" class="fragment magenta">Let's Encrypt</li>
             </ul>
         </section>
 
         <section>
-            <h2>Chiffrement assymétrique</h2>
+            <h2>Empreinte numérique</h2>
 
-            <div data-svg-fragment="myAssets/images/assymétrique.svg#[*|label=toto]">
-                <a class="fragment" title="[*|label=base]"></a>
+            <div style="margin-top: 10vh; margin-bottom: 100%" data-svg-fragment="myAssets/images/hashage.svg#[*|label=base]">
                 <a class="fragment" title="[*|label=frag1]"></a>
                 <a class="fragment" title="[*|label=frag2]"></a>
                 <a class="fragment" title="[*|label=frag3]"></a>
@@ -75,8 +93,30 @@
         <section>
             <h2>Chiffrement assymétrique</h2>
 
-            <ul style="margin-top: 1em">
-                <li class="fragment">Résoud distribution de clefs</span></li>
+            <ul style="margin-top: 10vh">
+                <li class="fragment">Deux clef distinctes</li>
+                <li class="fragment">Mathématiquement liées</li>
+                <li class="fragment" style="margin-bottom: 1em">Réciproquement non déductibles</li>
+                <li class="fragment"><span class="yellow">Privée</span> + <span class="blue">publique</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Chiffrement assymétrique</h2>
+
+            <div style="margin-top: 10vh; margin-bottom: 100%" data-svg-fragment="myAssets/images/assymétrique.svg#[*|label=base]">
+                <a class="fragment" title="[*|label=frag1]"></a>
+                <a class="fragment" title="[*|label=frag2]"></a>
+                <a class="fragment" title="[*|label=frag3]"></a>
+                <a class="fragment" title="[*|label=frag4]"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Chiffrement assymétrique</h2>
+
+            <ul style="margin-top: 10vh">
+                <li class="fragment">Résout distribution de clefs</span></li>
                 <li class="fragment" style="margin-bottom: 1em">Lent<span class="fragment"> ⇒ Signature</span></li>
                 <li class="fragment"><span class="orange">DSA</span> : Digital Signature Algorithm</li>
                 <li class="fragment"><span class="orange">RSA</span> : Rivest - Shamir - Adelman</li>
@@ -87,7 +127,7 @@
         <section>
             <h2>Signature</h2>
 
-            <ul style="margin-top: 2em">
+            <ul style="margin-top: 10vh">
                 <div data-svg-fragment="myAssets/images/signature.svg#[*|label=base]">
                     <a class="fragment" title="[*|label=frag1]"></a>
                     <a class="fragment" title="[*|label=frag2]"></a>
@@ -102,7 +142,7 @@
         <section>
             <h2>Certificats</h2>
 
-            <ul style="margin-top: 2em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment">Clef publique ↔ <span class="green">sujet</span></li>
                 <li class="fragment">Méta données</li>
                 <li class="fragment">Numériquement signé</li>
@@ -112,7 +152,7 @@
         <section>
             <h2>Certificats</h2>
 
-            <ul style="margin-top: 2em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment">Normé (X.509 & RFC 5280)</li>
                 <li class="fragment">Description  ⇒ <span class="green">ASN.1</span></li>
                 <li class="fragment">Codage  ⇒ DER et PEM</li>
@@ -121,297 +161,299 @@
 
         <section>
             <h2>DER</h2>
-            <pre style="overflow-x: hidden; border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%">
+            <pre style="overflow-x: hidden; margin-top: 5vh; margin-bottom: 100%">
 
-                       0 202 005 031   0 202 004 001 240 003 002 001 002 002 022 003
-                     230 316   n 243 271 333  \t 332 021 275 262       p 336 316 240
-                       d   0  \r 006  \t   * 206   H 206 367  \r 001 001  \v 005  \0
-                       0   J   1  \v   0  \t 006 003   U 004 006 023 002   U   S   1
-                     026   0 024 006 003   U 004  \n 023  \r   L   e   t   '   s
-                       E   n   c   r   y   p   t   1   #   0   ! 006 003   U 004 003
-                     023 032   L   e   t   '   s       E   n   c   r   y   p   t
-                       A   u   t   h   o   r   i   t   y       X   3   0 036 027  \r
-                       1   8   0   2   1   6   1   6   5   0   4   5   Z 027  \r   1
-                       8   0   5   1   7   1   6   5   0   4   5   Z   0   &   1   $
-                       0   " 006 003   U 004 003 023 033   m   o   n   t   p   e   l
-                       l   i   e   r   -   j   u   g   .   c   a   b   e   s   t   r
-                       e   .   f   r   0 202 001   "   0  \r 006  \t   * 206   H 206
-                     367  \r 001 001 001 005  \0 003 202 001 017  \0   0 202 001  \n
-                     002 202 001 001  \0 345 252   : 344   ` 032 307   o   V   k 323
-                     353 275   X 336 362 003 357 333   ~   ] 327   ` 241 346 302 232
-                       V 333 335 361   <   `   - 227   V   4   ;   3 217 177 035   )
-                     264 334 225 227   J   G 211 376 317 361   W   -   z   5 277 026
-                     376   E 332   .   \   C 202   W   9 263 001   d   + 207 017 267
-                           C 225 231 361 020  \r  \n   h   J   > 343   [   U 200 361
-                       2   u   v   = 212   d   B 362 314 222   j 303   * 325 022   -
-                       ` 252 245 207 223   Q 363 206   ;   J 247 370   #   F   k 214
-                     263 262   J   L   l   R 220   N 025   g   { 346   t 034 312   :
-                       B   | 263   > 236 343 024 032   t   ~ 353 341 340   \ 022 342
-                     241  \0 321 331 236 352   ^ 003 361 220 370 350 235 215   0 313
-                       j 223 335   }   y 205 004 331 312   ! 330 303   0 363 261   z
-                     343 351 377   t   4 256   | 233 332 314   } 203 232  \b   )   H
-                     260 036 370   Q 221 205 220   ` 333   q 351   }   Z   "   o 247
-                     020   r 236 271 354   Z 273 317   X 021 302 336   '   h  \t 336
-
+                        30 82 05 4d 30 82 04 35 a0 03 02 01 02 02 12 04  >0..M0..5........<
+                        1c a7 bd 77 d7 a5 fe a2 55 77 33 a6 a7 09 21 6c  >...w....Uw3...!l<
+                        b7 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00  >.0...*.H........<
+                        30 4a 31 0b 30 09 06 03 55 04 06 13 02 55 53 31  >0J1.0...U....US1<
+                        16 30 14 06 03 55 04 0a 13 0d 4c 65 74 27 73 20  >.0...U....Let's <
+                        45 6e 63 72 79 70 74 31 23 30 21 06 03 55 04 03  >Encrypt1#0!..U..<
+                        13 1a 4c 65 74 27 73 20 45 6e 63 72 79 70 74 20  >..Let's Encrypt <
+                        41 75 74 68 6f 72 69 74 79 20 58 33 30 1e 17 0d  >Authority X30...<
+                        31 38 30 33 31 39 31 37 33 39 35 31 5a 17 0d 31  >180319173951Z..1<
+                        38 30 36 31 37 31 37 33 39 35 31 5a 30 22 31 20  >80617173951Z0"1 <
+                        30 1e 06 03 55 04 03 13 17 64 65 76 6f 78 78 2e  >0...U....devoxx.<
+                        64 65 6d 6f 2e 63 61 62 65 73 74 72 65 2e 66 72  >demo.cabestre.fr<
+                        30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01  >0.."0...*.H.....<
+                        01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01  >........0.......<
+                        00 cd 06 c7 ab bb ca 36 8e 4b 2d 46 9d 0b 4b c5  >.......6.K-F..K.<
+                        51 c8 2c e4 71 ec f7 31 95 dd 3b 20 62 7e b4 b8  >Q.,.q..1..; b~..<
+                        d9 3d 34 bf 38 0c d0 dc 0c ab 07 d5 7d 36 17 12  >.=4.8.......}6..<
+                        09 15 96 1f 80 ef 9a 46 23 6d 0f 3d 84 17 cf a9  >.......F#m.=....<
+                        58 21 08 6f 74 74 48 6c 9e 53 c9 4a 17 d5 d2 46  >X!.ottHl.S.J...F<
+                        aa 4a 35 de 34 fd 14 55 19 ee f0 c0 dd 66 72 28  >.J5.4..U.....fr(<
+                        96 0c fe 94 04 89 66 ea 1c 94 5b 05 a0 9b f8 97  >......f...[.....<
+                        ac a5 6c e1 09 be d4 b1 86 8b 4b 13 e2 21 fb d8  >..l.......K..!..<
+                        65 d4 d8 2d 8d ca 1e 83 4d ae 15 ea ae 92 7f da  >e..-....M.......<
+                        aa ce bb 4f b3 69 54 bd 74 09 4c a3 a2 46 b8 c4  >...O.iT.t.L..F..<
+                        ea 86 ec 1c a7 44 b1 ce 04 3e 96 4d 92 b8 97 82  >.....D...>.M....<
+                        0f 6f 1a 27 cc eb 0b 14 ca 92 06 08 b1 ff 39 7b  >.o.'..........9{<
+                        e7 43 f0 c6 64 bb b8 cb d7 51 8d c9 52 f4 b0 32  >.C..d....Q..R..2<
+                        9d c5 d3 66 88 f9 74 12 44 6f 2e 86 2b b2 df 6d  >...f..t.Do..+..m<
             </pre>
         </section>
 
         <section>
             <h2>DER</h2>
-            <pre style="overflow-x: hidden; border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%">
+            <pre style="overflow-x: hidden; margin-top: 5vh; margin-bottom: 100%">
 
-                       0 202 005 031   0 202 004 001 240 003 002 001 002 002 022 003
-                     230 316   n 243 271 333  \t 332 021 275 262       p 336 316 240
-                       d   0  \r 006  \t   * 206   H 206 367  \r 001 001  \v 005  \0
-                       0   J   1  \v   0  \t 006 003   U 004 006 023 002   U   S   1
-                     026   0 024 006 003   U 004  \n 023  \r   L   e   t   '   s
-                       E   n   c   r   y   p   t   1   #   0   ! 006 003   U 004 003
-                     023 032   L   e   t   '   s       E   n   c   r   y   p   t
-                       A   u   t   h   o   r   i   t   y       X   3   0 036 027  \r
-                       1   8   0   2   1   6   1   6   5   0   4   5   Z 027  \r   1
-                       8   0   5   1   7   1   6   5   0   4   5   Z   0   &   1   $
-                       0   " 006 003   U 004 003 023 033   <span class="yellow">m   o   n   t   p   e   l
-                       l   i   e   r   -   j   u   g   .   c   a   b   e   s   t   r
-                       e   .   f   r   </span>0 202 001   "   0  \r 006  \t   * 206   H 206
-                     367  \r 001 001 001 005  \0 003 202 001 017  \0   0 202 001  \n
-                     002 202 001 001  \0 345 252   : 344   ` 032 307   o   V   k 323
-                     353 275   X 336 362 003 357 333   ~   ] 327   ` 241 346 302 232
-                       V 333 335 361   <   `   - 227   V   4   ;   3 217 177 035   )
-                     264 334 225 227   J   G 211 376 317 361   W   -   z   5 277 026
-                     376   E 332   .   \   C 202   W   9 263 001   d   + 207 017 267
-                           C 225 231 361 020  \r  \n   h   J   > 343   [   U 200 361
-                       2   u   v   = 212   d   B 362 314 222   j 303   * 325 022   -
-                       ` 252 245 207 223   Q 363 206   ;   J 247 370   #   F   k 214
-                     263 262   J   L   l   R 220   N 025   g   { 346   t 034 312   :
-                       B   | 263   > 236 343 024 032   t   ~ 353 341 340   \ 022 342
-                     241  \0 321 331 236 352   ^ 003 361 220 370 350 235 215   0 313
-                       j 223 335   }   y 205 004 331 312   ! 330 303   0 363 261   z
-                     343 351 377   t   4 256   | 233 332 314   } 203 232  \b   )   H
-                     260 036 370   Q 221 205 220   ` 333   q 351   }   Z   "   o 247
-                     020   r 236 271 354   Z 273 317   X 021 302 336   '   h  \t 336
-
+                        30 82 05 4d 30 82 04 35 a0 03 02 01 02 02 12 04  >0..M0..5........<
+                        1c a7 bd 77 d7 a5 fe a2 55 77 33 a6 a7 09 21 6c  >...w....Uw3...!l<
+                        b7 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00  >.0...*.H........<
+                        30 4a 31 0b 30 09 06 03 55 04 06 13 02 55 53 31  >0J1.0...U....US1<
+                        16 30 14 06 03 55 04 0a 13 0d 4c 65 74 27 73 20  >.0...U....<span class="yellow">Let's</span> <
+                        45 6e 63 72 79 70 74 31 23 30 21 06 03 55 04 03  ><span class="yellow">Encrypt</span>1#0!..U..<
+                        13 1a 4c 65 74 27 73 20 45 6e 63 72 79 70 74 20  >..<span class="yellow">Let's Encrypt</span> <
+                        41 75 74 68 6f 72 69 74 79 20 58 33 30 1e 17 0d  ><span class="yellow">Authority X30</span>...<
+                        31 38 30 33 31 39 31 37 33 39 35 31 5a 17 0d 31  >180319173951Z..1<
+                        38 30 36 31 37 31 37 33 39 35 31 5a 30 22 31 20  >80617173951Z0"1 <
+                        30 1e 06 03 55 04 03 13 17 64 65 76 6f 78 78 2e  >0...U....<span class="yellow">devoxx.</span><
+                        64 65 6d 6f 2e 63 61 62 65 73 74 72 65 2e 66 72  ><span class="yellow">demo.cabestre.fr</span><
+                        30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01  >0.."0...*.H.....<
+                        01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01  >........0.......<
+                        00 cd 06 c7 ab bb ca 36 8e 4b 2d 46 9d 0b 4b c5  >.......6.K-F..K.<
+                        51 c8 2c e4 71 ec f7 31 95 dd 3b 20 62 7e b4 b8  >Q.,.q..1..; b~..<
+                        d9 3d 34 bf 38 0c d0 dc 0c ab 07 d5 7d 36 17 12  >.=4.8.......}6..<
+                        09 15 96 1f 80 ef 9a 46 23 6d 0f 3d 84 17 cf a9  >.......F#m.=....<
+                        58 21 08 6f 74 74 48 6c 9e 53 c9 4a 17 d5 d2 46  >X!.ottHl.S.J...F<
+                        aa 4a 35 de 34 fd 14 55 19 ee f0 c0 dd 66 72 28  >.J5.4..U.....fr(<
+                        96 0c fe 94 04 89 66 ea 1c 94 5b 05 a0 9b f8 97  >......f...[.....<
+                        ac a5 6c e1 09 be d4 b1 86 8b 4b 13 e2 21 fb d8  >..l.......K..!..<
+                        65 d4 d8 2d 8d ca 1e 83 4d ae 15 ea ae 92 7f da  >e..-....M.......<
+                        aa ce bb 4f b3 69 54 bd 74 09 4c a3 a2 46 b8 c4  >...O.iT.t.L..F..<
+                        ea 86 ec 1c a7 44 b1 ce 04 3e 96 4d 92 b8 97 82  >.....D...>.M....<
+                        0f 6f 1a 27 cc eb 0b 14 ca 92 06 08 b1 ff 39 7b  >.o.'..........9{<
+                        e7 43 f0 c6 64 bb b8 cb d7 51 8d c9 52 f4 b0 32  >.C..d....Q..R..2<
+                        9d c5 d3 66 88 f9 74 12 44 6f 2e 86 2b b2 df 6d  >...f..t.Do..+..m<
             </pre>
         </section>
 
         <section>
             <h2>PEM</h2>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%">
+            <pre style="margin-top: 5vh; margin-bottom: 100%">
 
-                      -----BEGIN CERTIFICATE-----
-                      MIIFGTCCBAGgAwIBAgISA5jObqO52wnaEb2yIHDezqBkMA0GCSqGSIb3DQEBCwUA
-                      MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
-                      ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0xODAyMTYxNjUwNDVaFw0x
-                      ODA1MTcxNjUwNDVaMCYxJDAiBgNVBAMTG21vbnRwZWxsaWVyLWp1Zy5jYWJlc3Ry
-                      ZS5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOWqOuRgGsdvVmvT
-                      671Y3vID79t+XddgoebCmlbb3fE8YC2XVjQ7M49/HSm03JWXSkeJ/s/xVy16Nb8W
-                      /kXaLlxDglc5swFkK4cPtyBDlZnxEA0KaEo+41tVgPEydXY9imRC8sySasMq1RIt
-                      YKqlh5NR84Y7Sqf4I0ZrjLOySkxsUpBOFWd75nQcyjpCfLM+nuMUGnR+6+HgXBLi
-                      oQDR2Z7qXgPxkPjonY0wy2qT3X15hQTZyiHYwzDzsXrj6f90NK58m9rMfYOaCClI
-                      sB74UZGFkGDbcel9WiJvpxBynrnsWrvPWBHC3idoCd7GAm2mP4oHU+pzKfnCoIH1
-                      508+8WUCAwEAAaOCAhswggIXMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr
-                      BgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUgFaRvGn/
-                      U447X1n3/eyoCd8QDuAwHwYDVR0jBBgwFoAUqEpqYwR93brm0Tm3pkVl7/Oo7KEw
-                      bwYIKwYBBQUHAQEEYzBhMC4GCCsGAQUFBzABhiJodHRwOi8vb2NzcC5pbnQteDMu
-                      bGV0c2VuY3J5cHQub3JnMC8GCCsGAQUFBzAChiNodHRwOi8vY2VydC5pbnQteDMu
-                      bGV0c2VuY3J5cHQub3JnLzAmBgNVHREEHzAdghttb250cGVsbGllci1qdWcuY2Fi
-                      ZXN0cmUuZnIwgf4GA1UdIASB9jCB8zAIBgZngQwBAgEwgeYGCysGAQQBgt8TAQEB
-                      MIHWMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCBqwYI
-                      KwYBBQUHAgIwgZ4MgZtUaGlzIENlcnRpZmljYXRlIG1heSBvbmx5IGJlIHJlbGll
-                      ZCB1cG9uIGJ5IFJlbHlpbmcgUGFydGllcyBhbmQgb25seSBpbiBhY2NvcmRhbmNl
-                      IHdpdGggdGhlIENlcnRpZmljYXRlIFBvbGljeSBmb3VuZCBhdCBodHRwczovL2xl
-                      dHNlbmNyeXB0Lm9yZy9yZXBvc2l0b3J5LzANBgkqhkiG9w0BAQsFAAOCAQEAmNTI
-                      zCOaJMJ6JWSFfgSCJj6ta5zn7F28CCINxD0fZ4K4oNnC+Gu5QeBWVbcGIsa8bbQX
-                      a9gIkO/PgZ28G0NUDe9Ew97WTFwTwfbnJ84coORkObtjwE/JcwjH2d8JTM24kpMk
-                      bMllnKd7sPA4TkZY6/TfhIgRHTzKbZa5tdV0tbeUSZeNzDmnLlHIQ3kABu9/FoHs
-                      ICgjF1CRi5WO29IrQvdZiYSJy0hK9+Umr/7X/MMdHLHNYCvITsuH2LiTmXVzsFJJ
-                      49lWRKt45CgGsiqSQSvXuPSldNd9ozAXoe+eefsvvEO/YBUX0WfHZROcD51XRdy6
-                      coJNrLBknF+Gqg/Q2Q==
-                      -----END CERTIFICATE-----
+                            -----BEGIN CERTIFICATE-----
+                            MIIFTTCCBDWgAwIBAgISBBynvXfXpf6iVXczpqcJIWy3MA0GCSqGSIb3DQEBCwUA
+                            MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
+                            ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0xODAzMTkxNzM5NTFaFw0x
+                            ODA2MTcxNzM5NTFaMCIxIDAeBgNVBAMTF2Rldm94eC5kZW1vLmNhYmVzdHJlLmZy
+                            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzQbHq7vKNo5LLUadC0vF
+                            Ucgs5HHs9zGV3TsgYn60uNk9NL84DNDcDKsH1X02FxIJFZYfgO+aRiNtDz2EF8+p
+                            WCEIb3R0SGyeU8lKF9XSRqpKNd40/RRVGe7wwN1mciiWDP6UBIlm6hyUWwWgm/iX
+                            rKVs4Qm+1LGGi0sT4iH72GXU2C2Nyh6DTa4V6q6Sf9qqzrtPs2lUvXQJTKOiRrjE
+                            6obsHKdEsc4EPpZNkriXgg9vGifM6wsUypIGCLH/OXvnQ/DGZLu4y9dRjclS9LAy
+                            ncXTZoj5dBJEby6GK7LfbYtCToFuxvpyuuoVO7RM18JnQhsVVuxdFIIlBaGg6Avq
+                            zQIDAQABo4ICUzCCAk8wDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUF
+                            BwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBSNA952c2vZnPhd
+                            BmWev34RUlDvMzAfBgNVHSMEGDAWgBSoSmpjBH3duubRObemRWXv86jsoTBvBggr
+                            BgEFBQcBAQRjMGEwLgYIKwYBBQUHMAGGImh0dHA6Ly9vY3NwLmludC14My5sZXRz
+                            ZW5jcnlwdC5vcmcwLwYIKwYBBQUHMAKGI2h0dHA6Ly9jZXJ0LmludC14My5sZXRz
+                            ZW5jcnlwdC5vcmcvMF4GA1UdEQRXMFWCGGRldmZlc3QuZGVtby5jYWJlc3RyZS5m
+                            coIXZGV2b3h4LmRlbW8uY2FiZXN0cmUuZnKCIG1vbnRwZWxsaWVyLWp1Zy5kZW1v
+                            LmNhYmVzdHJlLmZyMIH+BgNVHSAEgfYwgfMwCAYGZ4EMAQIBMIHmBgsrBgEEAYLf
+                            EwEBATCB1jAmBggrBgEFBQcCARYaaHR0cDovL2Nwcy5sZXRzZW5jcnlwdC5vcmcw
+                            gasGCCsGAQUFBwICMIGeDIGbVGhpcyBDZXJ0aWZpY2F0ZSBtYXkgb25seSBiZSBy
+                            ZWxpZWQgdXBvbiBieSBSZWx5aW5nIFBhcnRpZXMgYW5kIG9ubHkgaW4gYWNjb3Jk
+                            YW5jZSB3aXRoIHRoZSBDZXJ0aWZpY2F0ZSBQb2xpY3kgZm91bmQgYXQgaHR0cHM6
+                            Ly9sZXRzZW5jcnlwdC5vcmcvcmVwb3NpdG9yeS8wDQYJKoZIhvcNAQELBQADggEB
+                            AC0teIt+PWd49gRmZEAkU7I3ftfB7K8S2wvo0K5fGvIIwoYP1vEMkhM66RNw+rV/
+                            7Gbos4h4ZcNrfb3A0Aq65Fhdu4CoxGWAHxt0vNI3MeAcijQsKZiRhC5ru/DSMSop
+                            e/kV/V3dErrBfgrQ88Wf8KDQeL9R+hWB1mBNmd7sRw+Y82cgkcoCae33WhyHulx1
+                            uEbvRpFHKA4Bl/LzsMB2/AcQhsYiLEi7Fyp8fjMUB02Gd5R6nBvrM+LVOXa/+iqc
+                            yrzzS5ZANmcONJLSGbExPuDrltESaihJjQ6RqkHRYtZLhTWg76Ib53rCGmEJidi4
+                            WIGV0oqkCJFCWzPiaSfUhL8=
+                            -----END CERTIFICATE-----
             </pre>
         </section>
 
         <section>
             <h2>Le couteau suisse</h2>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 24px; margin-top: 4em">
+            <pre style="font-size: 0.70em; margin-top: 10vh">
 
-   openssl x509 -noout -text -in <span style="font-style: oblique"> [-inform der]</span> certificate
+       openssl x509 -noout -text -in <span style="font-style: oblique"> [-inform der]</span> certificate
             </pre>
             <span  class="fragment">
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 20px; margin-top: 1em; margin-bottom: 100%">
+            <pre style="font-size: 0.70em; margin-top: 5vh; margin-bottom: 100%">
 
-    openssl x509 -inform der -outform pem -in cert.der -out cert.pem
-    openssl x509 -inform pem -outform der -in cert.pem -out cert.der
+   openssl x509 -inform der -outform pem -in cert.der -out cert.pem
+   openssl x509 -inform pem -outform der -in cert.pem -out cert.der
             </pre>
 
             </span>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-bottom: 100%">
 
               Certificate:
                   Data:
                       Version: 3 (0x2)
                       Serial Number:
-                          03:98:ce:6e:a3:b9:db:09:da:11:bd:b2:20:70:de:ce:a0:64
+                          04:1c:a7:bd:77:d7:a5:fe:a2:55:77:33:a6:a7:09:21:6c:b7
                   Signature Algorithm: sha256WithRSAEncryption
                       Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
                       Validity
-                          Not Before: Feb 16 16:50:45 2018 GMT
-                          Not After : May 17 16:50:45 2018 GMT
-                      <span class="yellow">Subject: CN=montpellier-jug.cabestre.fr</span>
-                      Public Key Info:
+                          Not Before: Mar 19 17:39:51 2018 GMT
+                          Not After : Jun 17 17:39:51 2018 GMT
+                      <span class="yellow">Subject: CN=devoxx.demo.cabestre.fr</span>
+                      Subject Public Key Info:
                           Public Key Algorithm: rsaEncryption
                               Public-Key: (2048 bit)
                               Modulus:
-                                  00:e5:aa:3a:e4:60:1a:c7:6f:56:6b:d3:eb:bd:58:
-                                  de:f2:03:ef:db:7e:5d:d7:60:a1:e6:c2:9a:56:db:
-                                  dd:f1:3c:60:2d:97:56:34:3b:33:8f:7f:1d:29:b4:
-                                  dc:95:97:4a:47:89:fe:cf:f1:57:2d:7a:35:bf:16:
-                                  fe:45:da:2e:5c:43:82:57:39:b3:01:64:2b:87:0f:
-                                  b7:20:43:95:99:f1:10:0d:0a:68:4a:3e:e3:5b:55:
-                                  80:f1:32:75:76:3d:8a:64:42:f2:cc:92:6a:c3:2a:
-                                  d5:12:2d:60:aa:a5:87:93:51:f3:86:3b:4a:a7:f8:
-                                  23:46:6b:8c:b3:b2:4a:4c:6c:52:90:4e:15:67:7b:
-                                  e6:74:1c:ca:3a:42:7c:b3:3e:9e:e3:14:1a:74:7e:
-                                  eb:e1:e0:5c:12:e2:a1:00:d1:d9:9e:ea:5e:03:f1:
-                                  90:f8:e8:9d:8d:30:cb:6a:93:dd:7d:79:85:04:d9:
-                                  ca:21:d8:c3:30:f3:b1:7a:e3:e9:ff:74:34:ae:7c:
-                                  9b:da:cc:7d:83:9a:08:29:48:b0:1e:f8:51:91:85:
-                                  90:60:db:71:e9:7d:5a:22:6f:a7:10:72:9e:b9:ec:
-                                  5a:bb:cf:58:11:c2:de:27:68:09:de:c6:02:6d:a6:
-                                  3f:8a:07:53:ea:73:29:f9:c2:a0:81:f5:e7:4f:3e:
-                                  f1:65
+                                  00:cd:06:c7:ab:bb:ca:36:8e:4b:2d:46:9d:0b:4b:
+                                  c5:51:c8:2c:e4:71:ec:f7:31:95:dd:3b:20:62:7e:
+                                  b4:b8:d9:3d:34:bf:38:0c:d0:dc:0c:ab:07:d5:7d:
+                                  36:17:12:09:15:96:1f:80:ef:9a:46:23:6d:0f:3d:
+                                  84:17:cf:a9:58:21:08:6f:74:74:48:6c:9e:53:c9:
+                                  4a:17:d5:d2:46:aa:4a:35:de:34:fd:14:55:19:ee:
+                                  f0:c0:dd:66:72:28:96:0c:fe:94:04:89:66:ea:1c:
+                                  94:5b:05:a0:9b:f8:97:ac:a5:6c:e1:09:be:d4:b1:
+                                  86:8b:4b:13:e2:21:fb:d8:65:d4:d8:2d:8d:ca:1e:
+                                  83:4d:ae:15:ea:ae:92:7f:da:aa:ce:bb:4f:b3:69:
+                                  54:bd:74:09:4c:a3:a2:46:b8:c4:ea:86:ec:1c:a7:
+                                  44:b1:ce:04:3e:96:4d:92:b8:97:82:0f:6f:1a:27:
+                                  cc:eb:0b:14:ca:92:06:08:b1:ff:39:7b:e7:43:f0:
+                                  c6:64:bb:b8:cb:d7:51:8d:c9:52:f4:b0:32:9d:c5:
+                                  d3:66:88:f9:74:12:44:6f:2e:86:2b:b2:df:6d:8b:
+                                  42:4e:81:6e:c6:fa:72:ba:ea:15:3b:b4:4c:d7:c2:
+                                  67:42:1b:15:56:ec:5d:14:82:25:05:a1:a0:e8:0b:
+                                  ea:cd
                               Exponent: 65537 (0x10001)
 
             </pre>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-bottom: 100%">
 
               Certificate:
                   Data:
                       Version: 3 (0x2)
                       Serial Number:
-                          03:98:ce:6e:a3:b9:db:09:da:11:bd:b2:20:70:de:ce:a0:64
+                          04:1c:a7:bd:77:d7:a5:fe:a2:55:77:33:a6:a7:09:21:6c:b7
                   Signature Algorithm: sha256WithRSAEncryption
                       Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
                       Validity
-                          Not Before: Feb 16 16:50:45 2018 GMT
-                          Not After : May 17 16:50:45 2018 GMT
-                      Subject: CN=montpellier-jug.cabestre.fr
-                      <span class="yellow">Public Key Info:
+                          Not Before: Mar 19 17:39:51 2018 GMT
+                          Not After : Jun 17 17:39:51 2018 GMT
+                      Subject: CN=devoxx.demo.cabestre.fr
+                      <span class="yellow">Subject Public Key Info:
                           Public Key Algorithm: rsaEncryption
                               Public-Key: (2048 bit)
                               Modulus:
-                                  00:e5:aa:3a:e4:60:1a:c7:6f:56:6b:d3:eb:bd:58:
-                                  de:f2:03:ef:db:7e:5d:d7:60:a1:e6:c2:9a:56:db:
-                                  dd:f1:3c:60:2d:97:56:34:3b:33:8f:7f:1d:29:b4:
-                                  dc:95:97:4a:47:89:fe:cf:f1:57:2d:7a:35:bf:16:
-                                  fe:45:da:2e:5c:43:82:57:39:b3:01:64:2b:87:0f:
-                                  b7:20:43:95:99:f1:10:0d:0a:68:4a:3e:e3:5b:55:
-                                  80:f1:32:75:76:3d:8a:64:42:f2:cc:92:6a:c3:2a:
-                                  d5:12:2d:60:aa:a5:87:93:51:f3:86:3b:4a:a7:f8:
-                                  23:46:6b:8c:b3:b2:4a:4c:6c:52:90:4e:15:67:7b:
-                                  e6:74:1c:ca:3a:42:7c:b3:3e:9e:e3:14:1a:74:7e:
-                                  eb:e1:e0:5c:12:e2:a1:00:d1:d9:9e:ea:5e:03:f1:
-                                  90:f8:e8:9d:8d:30:cb:6a:93:dd:7d:79:85:04:d9:
-                                  ca:21:d8:c3:30:f3:b1:7a:e3:e9:ff:74:34:ae:7c:
-                                  9b:da:cc:7d:83:9a:08:29:48:b0:1e:f8:51:91:85:
-                                  90:60:db:71:e9:7d:5a:22:6f:a7:10:72:9e:b9:ec:
-                                  5a:bb:cf:58:11:c2:de:27:68:09:de:c6:02:6d:a6:
-                                  3f:8a:07:53:ea:73:29:f9:c2:a0:81:f5:e7:4f:3e:
-                                  f1:65
+                                  00:cd:06:c7:ab:bb:ca:36:8e:4b:2d:46:9d:0b:4b:
+                                  c5:51:c8:2c:e4:71:ec:f7:31:95:dd:3b:20:62:7e:
+                                  b4:b8:d9:3d:34:bf:38:0c:d0:dc:0c:ab:07:d5:7d:
+                                  36:17:12:09:15:96:1f:80:ef:9a:46:23:6d:0f:3d:
+                                  84:17:cf:a9:58:21:08:6f:74:74:48:6c:9e:53:c9:
+                                  4a:17:d5:d2:46:aa:4a:35:de:34:fd:14:55:19:ee:
+                                  f0:c0:dd:66:72:28:96:0c:fe:94:04:89:66:ea:1c:
+                                  94:5b:05:a0:9b:f8:97:ac:a5:6c:e1:09:be:d4:b1:
+                                  86:8b:4b:13:e2:21:fb:d8:65:d4:d8:2d:8d:ca:1e:
+                                  83:4d:ae:15:ea:ae:92:7f:da:aa:ce:bb:4f:b3:69:
+                                  54:bd:74:09:4c:a3:a2:46:b8:c4:ea:86:ec:1c:a7:
+                                  44:b1:ce:04:3e:96:4d:92:b8:97:82:0f:6f:1a:27:
+                                  cc:eb:0b:14:ca:92:06:08:b1:ff:39:7b:e7:43:f0:
+                                  c6:64:bb:b8:cb:d7:51:8d:c9:52:f4:b0:32:9d:c5:
+                                  d3:66:88:f9:74:12:44:6f:2e:86:2b:b2:df:6d:8b:
+                                  42:4e:81:6e:c6:fa:72:ba:ea:15:3b:b4:4c:d7:c2:
+                                  67:42:1b:15:56:ec:5d:14:82:25:05:a1:a0:e8:0b:
+                                  ea:cd
                               Exponent: 65537 (0x10001)</span>
 
             </pre>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-bottom: 100%">
 
               Certificate:
                   Data:
                       Version: 3 (0x2)
                       Serial Number:
-                          03:98:ce:6e:a3:b9:db:09:da:11:bd:b2:20:70:de:ce:a0:64
+                          04:1c:a7:bd:77:d7:a5:fe:a2:55:77:33:a6:a7:09:21:6c:b7
                   Signature Algorithm: sha256WithRSAEncryption
                       Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
                       <span class="yellow">Validity
-                          Not Before: Feb 16 16:50:45 2018 GMT
-                          Not After : May 17 16:50:45 2018 GMT</span>
-                      Subject: CN=montpellier-jug.cabestre.fr
-                      Public Key Info:
+                          Not Before: Mar 19 17:39:51 2018 GMT
+                          Not After : Jun 17 17:39:51 2018 GMT</span>
+                      Subject: CN=devoxx.demo.cabestre.fr
+                      Subject Public Key Info:
                           Public Key Algorithm: rsaEncryption
                               Public-Key: (2048 bit)
                               Modulus:
-                                  00:e5:aa:3a:e4:60:1a:c7:6f:56:6b:d3:eb:bd:58:
-                                  de:f2:03:ef:db:7e:5d:d7:60:a1:e6:c2:9a:56:db:
-                                  dd:f1:3c:60:2d:97:56:34:3b:33:8f:7f:1d:29:b4:
-                                  dc:95:97:4a:47:89:fe:cf:f1:57:2d:7a:35:bf:16:
-                                  fe:45:da:2e:5c:43:82:57:39:b3:01:64:2b:87:0f:
-                                  b7:20:43:95:99:f1:10:0d:0a:68:4a:3e:e3:5b:55:
-                                  80:f1:32:75:76:3d:8a:64:42:f2:cc:92:6a:c3:2a:
-                                  d5:12:2d:60:aa:a5:87:93:51:f3:86:3b:4a:a7:f8:
-                                  23:46:6b:8c:b3:b2:4a:4c:6c:52:90:4e:15:67:7b:
-                                  e6:74:1c:ca:3a:42:7c:b3:3e:9e:e3:14:1a:74:7e:
-                                  eb:e1:e0:5c:12:e2:a1:00:d1:d9:9e:ea:5e:03:f1:
-                                  90:f8:e8:9d:8d:30:cb:6a:93:dd:7d:79:85:04:d9:
-                                  ca:21:d8:c3:30:f3:b1:7a:e3:e9:ff:74:34:ae:7c:
-                                  9b:da:cc:7d:83:9a:08:29:48:b0:1e:f8:51:91:85:
-                                  90:60:db:71:e9:7d:5a:22:6f:a7:10:72:9e:b9:ec:
-                                  5a:bb:cf:58:11:c2:de:27:68:09:de:c6:02:6d:a6:
-                                  3f:8a:07:53:ea:73:29:f9:c2:a0:81:f5:e7:4f:3e:
-                                  f1:65
+                                  00:cd:06:c7:ab:bb:ca:36:8e:4b:2d:46:9d:0b:4b:
+                                  c5:51:c8:2c:e4:71:ec:f7:31:95:dd:3b:20:62:7e:
+                                  b4:b8:d9:3d:34:bf:38:0c:d0:dc:0c:ab:07:d5:7d:
+                                  36:17:12:09:15:96:1f:80:ef:9a:46:23:6d:0f:3d:
+                                  84:17:cf:a9:58:21:08:6f:74:74:48:6c:9e:53:c9:
+                                  4a:17:d5:d2:46:aa:4a:35:de:34:fd:14:55:19:ee:
+                                  f0:c0:dd:66:72:28:96:0c:fe:94:04:89:66:ea:1c:
+                                  94:5b:05:a0:9b:f8:97:ac:a5:6c:e1:09:be:d4:b1:
+                                  86:8b:4b:13:e2:21:fb:d8:65:d4:d8:2d:8d:ca:1e:
+                                  83:4d:ae:15:ea:ae:92:7f:da:aa:ce:bb:4f:b3:69:
+                                  54:bd:74:09:4c:a3:a2:46:b8:c4:ea:86:ec:1c:a7:
+                                  44:b1:ce:04:3e:96:4d:92:b8:97:82:0f:6f:1a:27:
+                                  cc:eb:0b:14:ca:92:06:08:b1:ff:39:7b:e7:43:f0:
+                                  c6:64:bb:b8:cb:d7:51:8d:c9:52:f4:b0:32:9d:c5:
+                                  d3:66:88:f9:74:12:44:6f:2e:86:2b:b2:df:6d:8b:
+                                  42:4e:81:6e:c6:fa:72:ba:ea:15:3b:b4:4c:d7:c2:
+                                  67:42:1b:15:56:ec:5d:14:82:25:05:a1:a0:e8:0b:
+                                  ea:cd
                               Exponent: 65537 (0x10001)
 
             </pre>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-bottom: 100%">
 
               Certificate:
                   Data:
                       Version: 3 (0x2)
                       Serial Number:
-                          03:98:ce:6e:a3:b9:db:09:da:11:bd:b2:20:70:de:ce:a0:64
+                          04:1c:a7:bd:77:d7:a5:fe:a2:55:77:33:a6:a7:09:21:6c:b7
                   Signature Algorithm: sha256WithRSAEncryption
                       <span class="yellow">Issuer: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3</span>
                       Validity
-                          Not Before: Feb 16 16:50:45 2018 GMT
-                          Not After : May 17 16:50:45 2018 GMT
-                      Subject: CN=montpellier-jug.cabestre.fr
-                      Public Key Info:
+                          Not Before: Mar 19 17:39:51 2018 GMT
+                          Not After : Jun 17 17:39:51 2018 GMT
+                      Subject: CN=devoxx.demo.cabestre.fr
+                      Subject Public Key Info:
                           Public Key Algorithm: rsaEncryption
                               Public-Key: (2048 bit)
                               Modulus:
-                                  00:e5:aa:3a:e4:60:1a:c7:6f:56:6b:d3:eb:bd:58:
-                                  de:f2:03:ef:db:7e:5d:d7:60:a1:e6:c2:9a:56:db:
-                                  dd:f1:3c:60:2d:97:56:34:3b:33:8f:7f:1d:29:b4:
-                                  dc:95:97:4a:47:89:fe:cf:f1:57:2d:7a:35:bf:16:
-                                  fe:45:da:2e:5c:43:82:57:39:b3:01:64:2b:87:0f:
-                                  b7:20:43:95:99:f1:10:0d:0a:68:4a:3e:e3:5b:55:
-                                  80:f1:32:75:76:3d:8a:64:42:f2:cc:92:6a:c3:2a:
-                                  d5:12:2d:60:aa:a5:87:93:51:f3:86:3b:4a:a7:f8:
-                                  23:46:6b:8c:b3:b2:4a:4c:6c:52:90:4e:15:67:7b:
-                                  e6:74:1c:ca:3a:42:7c:b3:3e:9e:e3:14:1a:74:7e:
-                                  eb:e1:e0:5c:12:e2:a1:00:d1:d9:9e:ea:5e:03:f1:
-                                  90:f8:e8:9d:8d:30:cb:6a:93:dd:7d:79:85:04:d9:
-                                  ca:21:d8:c3:30:f3:b1:7a:e3:e9:ff:74:34:ae:7c:
-                                  9b:da:cc:7d:83:9a:08:29:48:b0:1e:f8:51:91:85:
-                                  90:60:db:71:e9:7d:5a:22:6f:a7:10:72:9e:b9:ec:
-                                  5a:bb:cf:58:11:c2:de:27:68:09:de:c6:02:6d:a6:
-                                  3f:8a:07:53:ea:73:29:f9:c2:a0:81:f5:e7:4f:3e:
-                                  f1:65
+                                  00:cd:06:c7:ab:bb:ca:36:8e:4b:2d:46:9d:0b:4b:
+                                  c5:51:c8:2c:e4:71:ec:f7:31:95:dd:3b:20:62:7e:
+                                  b4:b8:d9:3d:34:bf:38:0c:d0:dc:0c:ab:07:d5:7d:
+                                  36:17:12:09:15:96:1f:80:ef:9a:46:23:6d:0f:3d:
+                                  84:17:cf:a9:58:21:08:6f:74:74:48:6c:9e:53:c9:
+                                  4a:17:d5:d2:46:aa:4a:35:de:34:fd:14:55:19:ee:
+                                  f0:c0:dd:66:72:28:96:0c:fe:94:04:89:66:ea:1c:
+                                  94:5b:05:a0:9b:f8:97:ac:a5:6c:e1:09:be:d4:b1:
+                                  86:8b:4b:13:e2:21:fb:d8:65:d4:d8:2d:8d:ca:1e:
+                                  83:4d:ae:15:ea:ae:92:7f:da:aa:ce:bb:4f:b3:69:
+                                  54:bd:74:09:4c:a3:a2:46:b8:c4:ea:86:ec:1c:a7:
+                                  44:b1:ce:04:3e:96:4d:92:b8:97:82:0f:6f:1a:27:
+                                  cc:eb:0b:14:ca:92:06:08:b1:ff:39:7b:e7:43:f0:
+                                  c6:64:bb:b8:cb:d7:51:8d:c9:52:f4:b0:32:9d:c5:
+                                  d3:66:88:f9:74:12:44:6f:2e:86:2b:b2:df:6d:8b:
+                                  42:4e:81:6e:c6:fa:72:ba:ea:15:3b:b4:4c:d7:c2:
+                                  67:42:1b:15:56:ec:5d:14:82:25:05:a1:a0:e8:0b:
+                                  ea:cd
                               Exponent: 65537 (0x10001)
 
             </pre>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 2em; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-top: 10vh; margin-bottom: 100%">
 
     X509v3 extensions:
         X509v3 Key Usage: critical
@@ -421,7 +463,7 @@
         X509v3 Basic Constraints: critical
             CA:FALSE
         X509v3 Subject Key Identifier:
-            80:56:91:BC:69:FF:53:8E:3B:5F:59:F7:FD:EC:A8:09:DF:10:0E:E0
+            8D:03:DE:76:73:6B:D9:9C:F8:5D:06:65:9E:BF:7E:11:52:50:EF:33
         X509v3 Authority Key Identifier:
             keyid:A8:4A:6A:63:04:7D:DD:BA:E6:D1:39:B7:A6:45:65:EF:F3:A8:EC:A1
 
@@ -430,20 +472,23 @@
             CA Issuers - URI:http://cert.int-x3.letsencrypt.org/
 
         X509v3 Subject Alternative Name:
-            DNS:montpellier-jug.cabestre.fr
+            DNS:devfest.demo.cabestre.fr,
+            DNS:devoxx.demo.cabestre.fr,
+            DNS:montpellier-jug.demo.cabestre.fr
         X509v3 Certificate Policies:
             Policy: 2.23.140.1.2.1
             Policy: 1.3.6.1.4.1.44947.1.1.1
-        CPS: http://cps.letsencrypt.org
-        User Notice:
-            Explicit Text: This Certificate may only be relied upon by Relying Parties and only
-            in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
+            CPS: http://cps.letsencrypt.org
+            User Notice:
+                Explicit Text: This Certificate may only be relied upon by Relying Parties and only
+                in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
 
             </pre>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 2em; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-top: 10vh; margin-bottom: 100%">
 
     X509v3 extensions:
         X509v3 Key Usage: critical
@@ -453,7 +498,7 @@
         X509v3 Basic Constraints: critical
             CA:FALSE
         X509v3 Subject Key Identifier:
-            80:56:91:BC:69:FF:53:8E:3B:5F:59:F7:FD:EC:A8:09:DF:10:0E:E0
+            8D:03:DE:76:73:6B:D9:9C:F8:5D:06:65:9E:BF:7E:11:52:50:EF:33
         X509v3 Authority Key Identifier:
             keyid:A8:4A:6A:63:04:7D:DD:BA:E6:D1:39:B7:A6:45:65:EF:F3:A8:EC:A1
 
@@ -462,121 +507,92 @@
             CA Issuers - URI:http://cert.int-x3.letsencrypt.org/
 
         X509v3 Subject Alternative Name:
-            <span class="yellow">DNS:montpellier-jug.cabestre.fr</span>
+            <span class="yellow">DNS:devfest.demo.cabestre.fr,
+            DNS:devoxx.demo.cabestre.fr,
+            DNS:montpellier-jug.demo.cabestre.fr</span>
         X509v3 Certificate Policies:
             Policy: 2.23.140.1.2.1
             Policy: 1.3.6.1.4.1.44947.1.1.1
-        CPS: http://cps.letsencrypt.org
-        User Notice:
-            Explicit Text: This Certificate may only be relied upon by Relying Parties and only
-            in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
+            CPS: http://cps.letsencrypt.org
+            User Notice:
+                Explicit Text: This Certificate may only be relied upon by Relying Parties and only
+                in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
 
             </pre>
         </section>
 
-<!--
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 2em; margin-bottom: 100%">
-
-    X509v3 extensions:
-        X509v3 Key Usage: critical
-            Digital Signature, Key Encipherment
-        X509v3 Extended Key Usage:
-            TLS Web Server Authentication, TLS Web Client Authentication
-        X509v3 Basic Constraints: critical
-            <span class="yellow">CA:FALSE</span>
-        X509v3 Subject Key Identifier:
-            80:56:91:BC:69:FF:53:8E:3B:5F:59:F7:FD:EC:A8:09:DF:10:0E:E0
-        X509v3 Authority Key Identifier:
-            keyid:A8:4A:6A:63:04:7D:DD:BA:E6:D1:39:B7:A6:45:65:EF:F3:A8:EC:A1
-
-        <span class="yellow">Authority Information Access:
-            OCSP - URI:http://ocsp.int-x3.letsencrypt.org
-            CA Issuers - URI:http://cert.int-x3.letsencrypt.org/</span>
-
-        X509v3 Subject Alternative Name:
-            DNS:montpellier-jug.cabestre.fr
-        X509v3 Certificate Policies:
-            Policy: 2.23.140.1.2.1
-            Policy: 1.3.6.1.4.1.44947.1.1.1
-        CPS: http://cps.letsencrypt.org
-        User Notice:
-            Explicit Text: This Certificate may only be relied upon by Relying Parties and only
-            in accordance with the Certificate Policy found at https://letsencrypt.org/repository/
-
-            </pre>
-        </section>
--->
-
-        <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 3em; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-top: 10vh; margin-bottom: 100%">
 
     Signature Algorithm: <span class="yellow">sha256WithRSAEncryption</span>
-        98:d4:c8:cc:23:9a:24:c2:7a:25:64:85:7e:04:82:26:3e:ad:
-        6b:9c:e7:ec:5d:bc:08:22:0d:c4:3d:1f:67:82:b8:a0:d9:c2:
-        f8:6b:b9:41:e0:56:55:b7:06:22:c6:bc:6d:b4:17:6b:d8:08:
-        90:ef:cf:81:9d:bc:1b:43:54:0d:ef:44:c3:de:d6:4c:5c:13:
-        c1:f6:e7:27:ce:1c:a0:e4:64:39:bb:63:c0:4f:c9:73:08:c7:
-        d9:df:09:4c:cd:b8:92:93:24:6c:c9:65:9c:a7:7b:b0:f0:38:
-        4e:46:58:eb:f4:df:84:88:11:1d:3c:ca:6d:96:b9:b5:d5:74:
-        b5:b7:94:49:97:8d:cc:39:a7:2e:51:c8:43:79:00:06:ef:7f:
-        16:81:ec:20:28:23:17:50:91:8b:95:8e:db:d2:2b:42:f7:59:
-        89:84:89:cb:48:4a:f7:e5:26:af:fe:d7:fc:c3:1d:1c:b1:cd:
-        60:2b:c8:4e:cb:87:d8:b8:93:99:75:73:b0:52:49:e3:d9:56:
-        44:ab:78:e4:28:06:b2:2a:92:41:2b:d7:b8:f4:a5:74:d7:7d:
-        a3:30:17:a1:ef:9e:79:fb:2f:bc:43:bf:60:15:17:d1:67:c7:
-        65:13:9c:0f:9d:57:45:dc:ba:72:82:4d:ac:b0:64:9c:5f:86:
-        aa:0f:d0:d9
+         2d:2d:78:8b:7e:3d:67:78:f6:04:66:64:40:24:53:b2:37:7e:
+         d7:c1:ec:af:12:db:0b:e8:d0:ae:5f:1a:f2:08:c2:86:0f:d6:
+         f1:0c:92:13:3a:e9:13:70:fa:b5:7f:ec:66:e8:b3:88:78:65:
+         c3:6b:7d:bd:c0:d0:0a:ba:e4:58:5d:bb:80:a8:c4:65:80:1f:
+         1b:74:bc:d2:37:31:e0:1c:8a:34:2c:29:98:91:84:2e:6b:bb:
+         f0:d2:31:2a:29:7b:f9:15:fd:5d:dd:12:ba:c1:7e:0a:d0:f3:
+         c5:9f:f0:a0:d0:78:bf:51:fa:15:81:d6:60:4d:99:de:ec:47:
+         0f:98:f3:67:20:91:ca:02:69:ed:f7:5a:1c:87:ba:5c:75:b8:
+         46:ef:46:91:47:28:0e:01:97:f2:f3:b0:c0:76:fc:07:10:86:
+         c6:22:2c:48:bb:17:2a:7c:7e:33:14:07:4d:86:77:94:7a:9c:
+         1b:eb:33:e2:d5:39:76:bf:fa:2a:9c:ca:bc:f3:4b:96:40:36:
+         67:0e:34:92:d2:19:b1:31:3e:e0:eb:96:d1:12:6a:28:49:8d:
+         0e:91:aa:41:d1:62:d6:4b:85:35:a0:ef:a2:1b:e7:7a:c2:1a:
+         61:09:89:d8:b8:58:81:95:d2:8a:a4:08:91:42:5b:33:e2:69:
+         27:d4:84:bf
 
             </pre>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 3em; margin-bottom: 100%">
+            <h2>Anatomie</h2>
+            <pre style="margin-top: 10vh; margin-bottom: 100%">
 
     Signature Algorithm: sha256WithRSAEncryption
-        <span class="yellow">98:d4:c8:cc:23:9a:24:c2:7a:25:64:85:7e:04:82:26:3e:ad:
-        6b:9c:e7:ec:5d:bc:08:22:0d:c4:3d:1f:67:82:b8:a0:d9:c2:
-        f8:6b:b9:41:e0:56:55:b7:06:22:c6:bc:6d:b4:17:6b:d8:08:
-        90:ef:cf:81:9d:bc:1b:43:54:0d:ef:44:c3:de:d6:4c:5c:13:
-        c1:f6:e7:27:ce:1c:a0:e4:64:39:bb:63:c0:4f:c9:73:08:c7:
-        d9:df:09:4c:cd:b8:92:93:24:6c:c9:65:9c:a7:7b:b0:f0:38:
-        4e:46:58:eb:f4:df:84:88:11:1d:3c:ca:6d:96:b9:b5:d5:74:
-        b5:b7:94:49:97:8d:cc:39:a7:2e:51:c8:43:79:00:06:ef:7f:
-        16:81:ec:20:28:23:17:50:91:8b:95:8e:db:d2:2b:42:f7:59:
-        89:84:89:cb:48:4a:f7:e5:26:af:fe:d7:fc:c3:1d:1c:b1:cd:
-        60:2b:c8:4e:cb:87:d8:b8:93:99:75:73:b0:52:49:e3:d9:56:
-        44:ab:78:e4:28:06:b2:2a:92:41:2b:d7:b8:f4:a5:74:d7:7d:
-        a3:30:17:a1:ef:9e:79:fb:2f:bc:43:bf:60:15:17:d1:67:c7:
-        65:13:9c:0f:9d:57:45:dc:ba:72:82:4d:ac:b0:64:9c:5f:86:
-        aa:0f:d0:d9</span>
+         <span class="yellow">2d:2d:78:8b:7e:3d:67:78:f6:04:66:64:40:24:53:b2:37:7e:
+         d7:c1:ec:af:12:db:0b:e8:d0:ae:5f:1a:f2:08:c2:86:0f:d6:
+         f1:0c:92:13:3a:e9:13:70:fa:b5:7f:ec:66:e8:b3:88:78:65:
+         c3:6b:7d:bd:c0:d0:0a:ba:e4:58:5d:bb:80:a8:c4:65:80:1f:
+         1b:74:bc:d2:37:31:e0:1c:8a:34:2c:29:98:91:84:2e:6b:bb:
+         f0:d2:31:2a:29:7b:f9:15:fd:5d:dd:12:ba:c1:7e:0a:d0:f3:
+         c5:9f:f0:a0:d0:78:bf:51:fa:15:81:d6:60:4d:99:de:ec:47:
+         0f:98:f3:67:20:91:ca:02:69:ed:f7:5a:1c:87:ba:5c:75:b8:
+         46:ef:46:91:47:28:0e:01:97:f2:f3:b0:c0:76:fc:07:10:86:
+         c6:22:2c:48:bb:17:2a:7c:7e:33:14:07:4d:86:77:94:7a:9c:
+         1b:eb:33:e2:d5:39:76:bf:fa:2a:9c:ca:bc:f3:4b:96:40:36:
+         67:0e:34:92:d2:19:b1:31:3e:e0:eb:96:d1:12:6a:28:49:8d:
+         0e:91:aa:41:d1:62:d6:4b:85:35:a0:ef:a2:1b:e7:7a:c2:1a:
+         61:09:89:d8:b8:58:81:95:d2:8a:a4:08:91:42:5b:33:e2:69:
+         27:d4:84:bf</span>
 
             </pre>
         </section>
 
         <section>
             <h2>Certificats génériques</h2>
-            <ul style="margin-top: 2em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment">Multiples sous-domaines</li>
-                <li class="fragment" style="margin-top: 1em"><span class="orange">*</span>.cabestre.fr</li>
-                <li class="fragment">montpellier<span class="orange">*</span>.cabestre.fr</li>
-                <li class="fragment" style="text-decoration:line-through; margin-top: 1em"><span class="orange">*</span>.<span class="orange">*</span>.cabestre.fr</li>
-                <li class="fragment" style="text-decoration:line-through">montpellier.<span class="orange">*</span>.cabestre.fr</li>
+                <li class="fragment" style="margin-top: 1em"><span class="orange">*</span>.demo.cabestre.fr</li>
+                <li class="fragment">devoxx<span class="orange">*</span>.demo.cabestre.fr</li>
+                <li class="fragment" style="text-decoration:line-through; margin-top: 1em"><span class="orange">*</span>.<span class="orange">*</span>.demo.cabestre.fr</li>
+                <li class="fragment" style="text-decoration:line-through">devoxx.<span class="orange">*</span>.demo.cabestre.fr</li>
             </ul>
         </section>
 
         <section>
             <h2>Autorités de certification</h2>
 
-            <ul style="margin-top: 2em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment">Tiers de confiance</li>
-                <li class="fragment">Verisign, IdenTrust, Let's Encrypt…</li>
-                <li class="fragment"><span class="orange">Vous</span> & <span class="orange">Moi</span></li>
+                <li class="fragment">Verisign, IdenTrust<span class="fragment"><span class="green">, Let's Encrypt</span>…</span></li>
+                <li style="margin-top: 3vh" class="fragment"><span class="orange">Vous</span> & <span class="orange">Moi</span></li>
             </ul>
         </section>
 
         <section>
-            <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 14px; margin-top: 3em; margin-bottom: 100%">
+            <h2>Anatomie (bis)</h2>
+            <pre style="margin-top: 10vh; margin-bottom: 100%">
 
       Certificate:
           …
@@ -613,7 +629,7 @@
         <section>
             <h2>Chaînes de certificats</h2>
 
-            <div style="margin-left: -60px" data-svg-fragment="myAssets/images/chaine.svg#[*|label=base]">
+            <div style="margin-top: 8vh" data-svg-fragment="myAssets/images/chaine.svg#[*|label=base]">
                 <a class="fragment" title="[*|label=frag1]"></a>
                 <a class="fragment" title="[*|label=frag2]"></a>
                 <a class="fragment" title="[*|label=frag3]"></a>
@@ -624,40 +640,43 @@
         <section>
             <h2>Chaînes de certificats</h2>
 
-            <div style="margin-left: -60px" data-svg-fragment="myAssets/images/chaine2.svg#[*|label=base]">
+            <div style="margin-top: 8vh" data-svg-fragment="myAssets/images/chaine2.svg#[*|label=base]">
             </div>
         </section>
 
         <section>
             <h2>Chaînes de certificats</h2>
 
-            <div style="margin-left: -60px" data-svg-fragment="myAssets/images/chaine3.svg#[*|label=base]">
+            <div style="margin-top: 8vh" data-svg-fragment="myAssets/images/chaine3.svg#[*|label=base]">
             </div>
         </section>
 
         <section>
             <h2>Confiance</h2>
-            <ul style="margin-top: 2em">
-                <li class="fragment">Pourquoi faire confiance ?</li>
+            <ul style="margin-top: 10vh">
+                <li class="fragment">Pourquoi faire confiance à un CA ?</li>
+                <li class="fragment"><img src="myAssets/images/cab.png" alt="CA/Browser forum"></li>
+                <li class="fragment"><span class="orange">Basic Requirements</span> [1 juillet 2012]</li>
                 <li class="fragment">Comment faire confiance ?</li>
-                <li class="fragment">Magasin de confiance, «trust store»</li>
+                <li class="fragment">Magasin de confiance, «<span class="orange">trust store</span>»</li>
             </ul>
         </section>
 
+
         <section>
             <h2>Confiance</h2>
-            <img src="myAssets/images/FirefoxBis.png" style="margin-bottom: 100%">
+            <img src="myAssets/images/FirefoxBis.png" style="margin-top: 10vh; margin-bottom: 100%">
         </section>
 
         <section>
             <h2>Confiance</h2>
-            <img src="myAssets/images/CaCerts.png" style="margin-bottom: 100%">
+            <img src="myAssets/images/CaCerts.png" style="margin-top: 10vh; margin-bottom: 100%">
         </section>
 
         <section>
             <h2>Types de validation</h2>
 
-            <ul style="margin-top: 1em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment">Validation de domaine</li>
                 <li class="fragment"><img src="myAssets/images/DV.png"/></li>
                 <li class="fragment">Validation d'organisation</li>
@@ -670,7 +689,7 @@
         <section>
             <h2>Validation de certificat</h2>
 
-            <div style="margin-top: 2em; margin-bottom: 100%" data-svg-fragment="myAssets/images/CSR.svg#[*|label=base]">
+            <div style="margin-top: 10vh; margin-bottom: 100%" data-svg-fragment="myAssets/images/CSR.svg#[*|label=base]">
                 <a class="fragment" title="[*|label=frag1]"></a>
                 <a class="fragment" title="[*|label=frag2]"></a>
                 <a class="fragment" title="[*|label=frag4]"></a>
@@ -681,7 +700,7 @@
         <section>
             <h2>Certificat compromis</h2>
 
-            <div  style="margin-bottom: 100%" data-svg-fragment="myAssets/images/compromission.svg#[*|label=base]">
+            <div  style="style=margin-top: 8vh ; margin-bottom: 100%" data-svg-fragment="myAssets/images/compromission.svg#[*|label=base]">
                 <a class="fragment" title="[*|label=frag3]"></a>
                 <a class="fragment" title="[*|label=frag1]"></a>
                 <a class="fragment" title="[*|label=frag2]"></a>
@@ -705,7 +724,7 @@
 
         <section>
             <h2>Verification</h2>
-            <div style="margin-top: 2em; margin-bottom: 100%" data-svg-fragment="myAssets/images/validation.svg#[*|label=base]">
+            <div style="margin-top: 15vh; margin-bottom: 100%" data-svg-fragment="myAssets/images/validation.svg#[*|label=base]">
                 <a class="fragment" title="[*|label=frag1]"></a>
                 <a class="fragment" title="[*|label=frag2]"></a>
                 <a class="fragment" title="[*|label=frag3]"></a>
@@ -715,7 +734,7 @@
 
         <section>
             <h2>Verification</h2>
-            <div style="margin-top: 2em; margin-bottom: 100%" data-svg-fragment="myAssets/images/validation2.svg#[*|label=base]">
+            <div style="margin-top: 15vh; margin-bottom: 100%" data-svg-fragment="myAssets/images/validation2.svg#[*|label=base]">
                 <a class="fragment" title="[*|label=frag1]"></a>
                 <a class="fragment" title="[*|label=frag3]"></a>
                 <a class="fragment" title="[*|label=frag4]"></a>
@@ -723,21 +742,30 @@
         </section>
 
         <section>
-            <h2 style="margin-bottom: 1em">Verification</h2>
-             <pre style="border: none; color: #dcdcdc; background: #002b36; font-size: 20px">
+            <h2>Verification</h2>
+             <pre style="font-size: 0.70em; margin-top: 10vh">
 
   openssl verify -CAfile chain.pem -purpose sslclient certificate.pem
              </pre>
-             <pre class="fragment" style="margin-bottom: 100%; border: none; color: #dcdcdc; background: #002b36; font-size: 20px; margin-top: 1em">
+             <pre class="fragment" style="font-size: 0.70em; margin-bottom: 100%; margin-top: 1em">
 
-  openssl s_client -connect montpellier-jug.cabestre.fr:8043 -showcerts
+  openssl s_client -connect devoxx.demo.cabestre.fr:8043 -showcerts
              </pre>
+        </section>
+
+        <section>
+            <h2>Oui mais…</h2>
+
+            <ul style="margin-top: 5vh">
+                <li class="fragment"><a href="https://scotthelme.co.uk/revocation-is-broken/"><span class="orange">Scott Helme</span> (https://scotthelme.co.uk)</a></li>
+                <li class="fragment"><img src="myAssets/images/Broken.png" alt="Revocation is broken"></a></li>
+            </ul>
         </section>
 
         <section>
             <h2>Let's Encrypt</h2>
 
-            <ul style="margin-top: 1em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment">Autorité de certification</li>
                 <li class="fragment">Service en ligne (API)</li>
                 <li class="fragment">Automatiser la livraison de certificats</li>
@@ -749,78 +777,129 @@
 
         <section>
             <h2>Let's Encrypt</h2>
-            <h4 style="margin-top: 1em">https://letsencrypt.status.io</h4>
+            <h4 style="margin-top: 5vh">https://letsencrypt.status.io</h4>
             <img style="margin-bottom: 100%" src="myAssets/images/LE-status.png">
         </section>
 
         <section>
             <h2>Let's Encrypt</h2>
-            <h4 style="margin-top: 1em">https://acme-v01.api.letsencrypt.org</h4>
-            <img style="margin-bottom: 10em" src="myAssets/images/LE-API.png">
+            <h4 style="margin-top: 5vh">https://acme-v02.api.letsencrypt.org</h4>
+            <pre style="margin-bottom: 100%; font-size: 0.45em">
+
+    ▶ curl -s https://acme-v02.api.letsencrypt.org/directory | jq .
+    {
+      "L_mO7pCPEEY": "https://community.letsencrypt.org/t/adding-random-entries-to-the-directory/33417",
+      "keyChange": "https://acme-v02.api.letsencrypt.org/acme/key-change",
+      "meta": {
+        "caaIdentities": [
+          "letsencrypt.org"
+        ],
+        "termsOfService": "https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf",
+        "website": "https://letsencrypt.org"
+      },
+      "newAccount": "https://acme-v02.api.letsencrypt.org/acme/new-acct",
+      "newNonce": "https://acme-v02.api.letsencrypt.org/acme/new-nonce",
+      "newOrder": "https://acme-v02.api.letsencrypt.org/acme/new-order",
+      "revokeCert": "https://acme-v02.api.letsencrypt.org/acme/revoke-cert"
+    }
+
+            </pre>
         </section>
 
         <section>
             <h2>ACME</h2>
 
-            <ul style="margin-top: 1em">
+            <ul style="margin-top: 10vh">
                 <div class="fragment">
                     <li><span class="orange">ISRG</span>: création 2013</li>
                     <li>Internet Security Research Group</li>
                 </div>
                 <div style="margin-top: 1em" class="fragment">
                     <li><span class="orange">IETF</span>: standardisation 2015</li>
-                    <li>Internet Egineering Task Force</li>
+                    <li>Internet Engineering Task Force</li>
                 </div>
                 <li class="fragment" style="margin-top: 1em"><span class="green">Certbot</span>: client Python</li>
                 <li class="fragment"><span class="green">Boulder</span>: serveur Go</li>
-                <li class="fragment">Et bien d'autres</li>
+                <li class="fragment">Et bien d'autres…</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Chaîne de confiance</h2>
+        <!--<section>-->
+            <!--<h2>Chaîne de confiance</h2>-->
 
-            <img style="margin-top: 1em; margin-bottom: 100%" src="myAssets/images/isrg-keys.png">
-        </section>
+            <!--<img style="margin-top: 10vh; margin-bottom: 100%" src="myAssets/images/isrg-keys.png">-->
+        <!--</section>-->
 
         <section>
             <h2>Principe</h2>
 
-            <ul style="margin-top: 2em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment">Protocole défi-réponse</li>
-                <li class="fragment">Automatiser vérification de domaine</li>
-                <li class="fragment green" style="margin-top: 1em">http-01, dns-01, tls-sni-02, oob-01</li>
+                <li class="fragment">Vérification de domaine <span class="magenta">automatisable</span></li>
+                <li class="fragment green" style="margin-top: 3vh">http-01, dns-01 <span class="yellow fragment">[ tls-sni-02, oob-01 ]</span></li>
             </ul>
         </section>
 
         <section>
             <h2>Principe</h2>
 
-            <img style="margin-top: 4em; margin-bottom: 10em" src="myAssets/images/howitworks_challenge.png">
+            <ul style="margin-top: 10vh; margin-bottom: 100%">
+                <div data-svg-fragment="myAssets/images/DNS-01-1b.svg#[*|label=base]">
+                    <a class="fragment" title="[*|label=frag1]"></a>
+                    <a class="fragment" title="[*|label=frag2]"></a>
+                    <a class="fragment" title="[*|label=frag3]"></a>
+                </div>
+            </ul>
+
         </section>
 
         <section>
             <h2>Principe</h2>
 
-            <img style="margin-top: 2em; margin-bottom: 10em" src="myAssets/images/howitworks_authorization.png">
+            <ul style="margin-top: 10vh; margin-bottom: 100%">
+                <div data-svg-fragment="myAssets/images/DNS-01-2b.svg#[*|label=base]">
+                    <a class="fragment" title="[*|label=frag1]"></a>
+                    <a class="fragment" title="[*|label=frag2]"></a>
+                    <a class="fragment" title="[*|label=frag3]"></a>
+                    <a class="fragment" title="[*|label=frag4]"></a>
+                    <a class="fragment" title="[*|label=frag5]"></a>
+                    <a class="fragment" title="[*|label=frag6]"></a>
+                </div>
+            </ul>
+
         </section>
 
         <section>
             <h2>Principe</h2>
 
-            <img style="margin-top: 3em; margin-bottom: 10em" src="myAssets/images/howitworks_certificate.png">
+            <ul style="margin-top: 10vh; margin-bottom: 100%">
+                <div data-svg-fragment="myAssets/images/DNS-01-3b.svg#[*|label=base]">
+                    <a class="fragment" title="[*|label=frag1]"></a>
+                    <a class="fragment" title="[*|label=frag2]"></a>
+                    <a class="fragment" title="[*|label=frag3]"></a>
+                </div>
+            </ul>
+
         </section>
 
         <section>
             <h2>Principe</h2>
 
-            <img style="margin-top: 1em; margin-bottom: 10em" src="myAssets/images/howitworks_revocation.png">
+            <ul style="margin-top: 10vh; margin-bottom: 100%">
+                <div data-svg-fragment="myAssets/images/DNS-01-4b.svg#[*|label=base]">
+                    <a class="fragment" title="[*|label=frag1]"></a>
+                    <a class="fragment" title="[*|label=frag2]"></a>
+                    <a class="fragment" title="[*|label=frag3]"></a>
+                    <a class="fragment" title="[*|label=frag4]"></a>
+                </div>
+            </ul>
+
         </section>
 
         <section>
             <h2>Limitations</h2>
 
-            <ul style="margin-top: 1em">
+            <ul style="margin-top: 10vh">
                 <li class="fragment"><span class="green">20</span> certificats / semaine</li>
                 <li class="fragment"><span class="green">100</span> SAN / certificats</li>
                 <li class="fragment"><span class="green">5</span> doubles / semaine</li>
@@ -832,7 +911,7 @@
         <section>
             <h2>Actualité</h2>
 
-            <ul style="margin-top: 2em">
+            <ul style="margin-top: 10vh">
                 <li class="green">27 février 2018</li>
                 <li class="fragment" style="margin-top: 1em">ACME v2.0</li>
                 <li class="fragment">Certificats génériques</li>
@@ -841,19 +920,17 @@
 
         <section>
             <div style="display: flex; justify-content: space-between">
-                <div style="display: flex; flex-direction: column">
+                <div style="; margin-left: 2em; display: flex; flex-direction: column">
                     <div style="margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
                     <div style="font-size: smaller; text-align: left" class="blue">@fcabestre</div>
                 </div>
-                <div style="margin-top: 1em; align-self: center"><img src="myAssets/images/easymile.png"></div>
+                <div style="margin-top: 1em; margin-right: 2em; align-self: center"><img src="myAssets/images/easymile.png"></div>
             </div>
             <h1 style="margin-top: 1em ; margin-bottom: 100%">Merci</h1>
         </section>
-
-        <section>
-            <h2>this</h2>
-            <img src="myAssets/images/bapdle.png" alt="this">
-        </section>
+    </div>
+    <div class="footer">
+        <img align="right" src="myAssets/images/logo-texte-devoxx-france-400.png" />
     </div>
 </div>
 
@@ -870,6 +947,8 @@
         progress: false,
         history: true,
         center: true,
+        width: 1600,
+        height: 900,
 
         transition: 'none', // none/fade/slide/convex/concave/zoom
 
