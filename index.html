@@ -2,49 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
 
     <title>Ballade au pays de «let's encrypt»</title>
 
-    <meta name="description" content="">
-    <meta name="author" content="Frédéric Cabestre">
+    <meta name="description" content="Ballade au pays de «let's encrypt»"/>
+    <meta name="author" content="Frédéric Cabestre"/>
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/transparents.css" id="theme">
-    <link rel="stylesheet" href="myAssets/css/transparents.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="./dist/theme/transparents.css" id="theme"/>
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
-
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="./plugin/highlight/zenburn.css"/>
 </head>
 
 <body>
 
 <div class="reveal">
     <div class="slides">
-        <section data-background-image="myAssets/images/background_1280_720_HD.png">
-            <h1 style="color: #fdf6e3">Ballade au pays de</h1>
-            <h1 style="color: #fdf6e3">«Let's Encrypt»</h1>
-        </section>
-
-<!--
         <section>
             <h1><span class="yellow">Ballade au pays de</span></h1>
             <h1><span class="yellow">«</span>Let's Encrypt<span class="yellow">»</span></h1>
         </section>
--->
 
         <section>
             <div style="display: flex; justify-content: space-between">
@@ -52,18 +32,13 @@
                     <div style="margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
                     <div style="font-size: smaller; text-align: left" class="blue">@fcabestre</div>
                 </div>
-                <div style="margin-right: 2em; margin-top: 1em; align-self: center"><img src="myAssets/images/easymile.png"></div>
             </div>
-            <div style="margin-top: 1em; margin-bottom: 100%; display: flex; flex-direction: row; justify-content: center" >
-                <img class="fragment" src="myAssets/images/ez10.png">
-                <img class="fragment" style="margin-right: 10vw; margin-left: 8vw; margin-top: 58px; margin-bottom: 0; object-fit: contain" src="myAssets/images/TractEasy.png">
-            </div>
+            <blockquote style="margin-top: 12em; margin-right: 2em; margin-bottom: 100%">
+                I'm not a number, I'm a freelance.
+                <div style="font-size: smaller">&mdash; Number 6, <a href="https://en.wikipedia.org/wiki/The_Prisoner">The
+                    Prisoner</a></div>
+            </blockquote>
         </section>
-
-        <!--<section>-->
-            <!--<h2>Public Key Infrastructure</h2>-->
-            <!--<img style="margin-top: 5vh; margin-bottom: 100%" src="myAssets/images/europe2.jpeg">-->
-        <!--</section>-->
 
         <section>
             <h2>Au Programme</h2>
@@ -924,22 +899,20 @@
                     <div style="margin-top: 1em; text-align: left" class="green">Frédéric Cabestre</div>
                     <div style="font-size: smaller; text-align: left" class="blue">@fcabestre</div>
                 </div>
-                <div style="margin-top: 1em; margin-right: 2em; align-self: center"><img src="myAssets/images/easymile.png"></div>
             </div>
             <h1 style="margin-top: 1em ; margin-bottom: 100%">Merci</h1>
         </section>
     </div>
-    <div class="footer">
-        <img align="right" src="myAssets/images/logo-texte-devoxx-france-400.png" />
-    </div>
 </div>
 
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.js"></script>
-<script src="myAssets/js/d3.min.js"></script>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/math/math.js"></script>
+<script src="dist/d3/d3.min.js"></script>
 
 <script>
-
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
@@ -950,49 +923,24 @@
         width: 1600,
         height: 900,
 
-        transition: 'none', // none/fade/slide/convex/concave/zoom
+        transition: "none",
 
-        math: {
-            mathjax: 'myAssets/js/MathJax.js',
-            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+
+        katex: {
+            local: "dist/katex",
+            trust: true
         },
 
-        // Optional reveal.js plugins
         dependencies: [
-            {src: 'plugin/math/math.js', async: true},
             {
-                src: 'lib/js/classList.js', condition: function () {
-                return !document.body.classList;
-            }
+                src: "dist/reveal-svg-fragment/reveal-svg-fragment.js",
+                condition: function () {
+                    return !!document.querySelector("[data-svg-fragment]");
+                },
             },
-            {
-                src: 'plugin/markdown/marked.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
-            },
-            {
-                src: 'plugin/markdown/markdown.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
-            },
-            {
-                src: 'plugin/highlight/highlight.js', async: true, condition: function () {
-                return !!document.querySelector('pre code');
-            }, callback: function () {
-                hljs.initHighlightingOnLoad();
-            }
-            },
-            {src: 'plugin/zoom-js/zoom.js', async: true},
-            {src: 'plugin/notes/notes.js', async: true},
-            {
-                d3: 'myAssets/js/d3.min.js',
-                src: 'myAssets/js/reveal-svg-fragment.js', condition: function () {
-                return !!document.querySelector('[data-svg-fragment]');
-            }
-            }
-        ]
+        ],
     });
-
 </script>
 
 </body>

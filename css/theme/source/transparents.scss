@@ -1,75 +1,139 @@
-/**
- * Solarized Light theme for reveal.js.
- * Author: Achim Staebler
- */
+@import "./css/theme/source/solarized";
 
-
-// Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
-// ---------------------------------------------
-
-
-
-// Include theme-specific fonts
-@import url(../../lib/font/league-gothic/league-gothic.css);
-@import url(../../../myAssets/fonts/Lato/Lato.css);
-
-
-/**
- * Solarized colors by Ethan Schoonover
- */
-html * {
-	color-profile: sRGB;
-	rendering-intent: auto;
+.reveal-viewport {
+  background: white;
 }
 
-// Solarized colors
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
-
-// Override theme settings (see ../template/settings.scss)
-$mainColor: $base00;
-$headingColor: $base01;
-$headingTextShadow: none;
-$backgroundColor: $base3;
-$linkColor: $blue;
-$linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: $magenta;
-
-// Background generator
-// @mixin bodyBackground() {
-// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
-// }
-
-.footer {
-  z-index: 10;
-  position:absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 35px;
+.reveal h1 {
+  color: $orange;
 }
 
-.footer img {
+.reveal h2 {
+  color: $yellow;
+}
+
+.reveal h3 {
+  color: $green;
+}
+
+.reveal .orange {
+  color: $orange;
+}
+
+.reveal .red {
+  color: $red;
+}
+
+.reveal .blue {
+  color: $blue;
+}
+
+.reveal .green {
+  color: $green;
+}
+
+.reveal .yellow {
+  color: $yellow;
+}
+
+.reveal .magenta {
+  color: $magenta;
+}
+
+.reveal .base3 {
+  color: $base3;
+}
+
+.reveal .slides section img {
+  margin: 15px 0;
+  border: none;
+  box-shadow: 0 0 0;
+}
+
+.reveal .slides section img[src$=".svg"] {
+  margin: 0 0;
+  border: none;
+  box-shadow: 0 0 0;
+}
+
+.reveal .slides section blockquote {
+  width: 30em;
+  background: white;
+  border: 0 solid;
+  box-shadow: 0 0 0;
+  text-align: right;
+  font-style: italic;
+  font-size: larger;
+  padding: 0 0;
+}
+
+.reveal .list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+}
+
+.reveal .list .item {
+  margin-left: 10%
+}
+
+.reveal .slides sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal iframe {
+  border: none;
+}
+
+.reveal pre {
+  width: 98%;
+  font-size: 0.40em;
+  border: none;
+  color: $base3;
+  background: $base03;
+}
+
+.reveal pre code {
+  background-color: $base03;
+  max-height: 800px;
+}
+
+.reveal .lang {
+  background-color: $base01;
   position: absolute;
-  top: 0px;
-  right: 3px;
-  height:100%; }
+  top: 0;
+  left: 0;
+  padding: 5px
+}
 
-// Theme template ------------------------------
-@import "../template/theme";
-// ---------------------------------------------
+.reveal .ch {
+  background-color: $base00;
+}
+
+.reveal .code {
+  background-color: $base3;
+  border-radius: 2px;
+  font-family: monospace;
+  font-size: smaller;
+  padding: 1px 4px;
+  border: 1px solid $base01;
+}
+
+.reveal .label {
+  background-color: $base3;
+  border-radius: 2px;
+  border: 1px solid $base01;
+}
+
+
+.reveal .slides section .fragment.highlight-current-back {
+  opacity: 1;
+  visibility: inherit;
+  
+  &.visible {
+    background-color: $base00;
+  }
+}
+
+
